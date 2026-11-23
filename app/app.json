@@ -5,12 +5,23 @@
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.motf.mobile"
+      "bundleIdentifier": "com.motf.mobile",
+      "icon": "./assets/icon.png"
     },
     "android": {
-      "package": "com.motf.mobile"
+      "package": "com.motf.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#C8FF00"
+      }
     }
   }
 }
