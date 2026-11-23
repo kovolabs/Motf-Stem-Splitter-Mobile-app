@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, Pressable, View } from 'react-native';
+import { Linking, SafeAreaView, StyleSheet, Text, Pressable, View } from 'react-native';
 import type { EngineCapabilities, Job } from '../engine/contract';
 import { engine, modelManager } from './src/engine/engineBridge';
 import type { ModelPack } from './src/engine/modelManager';
@@ -179,6 +179,12 @@ export default function App() {
           />
         ) : null}
       </View>
+
+      <Pressable style={styles.footer} onPress={() => Linking.openURL('https://cuesessions.com/')}>
+        <Text style={styles.footerText}>
+          Powered by <Text style={styles.footerBrand}>Cue</Text> · cuesessions.com
+        </Text>
+      </Pressable>
     </SafeAreaView>
   );
 }
@@ -195,4 +201,7 @@ const styles = StyleSheet.create({
   tabText: { color: '#9ca3af', fontSize: 12, fontWeight: '700' },
   tabTextActive: { color: '#ffffff' },
   body: { flex: 1 },
+  footer: { paddingHorizontal: 16, paddingVertical: 12, alignItems: 'center', borderTopWidth: 1, borderTopColor: '#2b2b45' },
+  footerText: { color: '#6b7280', fontSize: 11 },
+  footerBrand: { color: '#a78bfa', fontWeight: '700' },
 });
