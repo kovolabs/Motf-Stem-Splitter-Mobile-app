@@ -1,0 +1,28 @@
+{
+  "modelId": "uvr-mdx-net-inst-hq-3",
+  "mode": "vocal_instrumental",
+  "version": "1.0.0-candidate",
+  "runtime": "onnxruntime",
+  "files": [
+    {
+      "path": "models/onnx/UVR-MDX-NET-Inst_HQ_3.onnx",
+      "sha256": "REPLACE_WITH_REAL_SHA256_AFTER_DOWNLOAD_AND_VERIFICATION________________",
+      "sizeBytes": 66759214
+    }
+  ],
+  "input": {
+    "sampleRate": 44100,
+    "channels": 2,
+    "format": "float32"
+  },
+  "output": {
+    "stems": ["vocals", "instrumental"]
+  },
+  "license": {
+    "name": "MIT (pending provenance/redistribution verification)",
+    "url": "https://huggingface.co/notabilia/uvr5-models/blob/main/UVR-MDX-NET-Inst_HQ_3.LICENSE",
+    "attribution": "Ultimate Vocal Remover (Anjok07, KimberleyJSN, UVR community); KUIELab-MDX-Net (Woosung Choi et al., arXiv:2111.12203). Verify original rights before redistribution.",
+    "redistributable": false
+  },
+  "notes": "PENDING - DO NOT SHIP. Candidate MVP model selected for evaluation only. Replace sha256 with real file hash, verify license/provenance, confirm tensor I/O contract (sample rate/channels/format/stem order/chunking), and validate on ONNX Runtime Mobile before marking redistributable or enabling production use."
+}

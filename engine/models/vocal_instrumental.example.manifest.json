@@ -1,0 +1,28 @@
+{
+  "modelId": "vocal-instrumental-example-v1",
+  "mode": "vocal_instrumental",
+  "version": "0.1.0",
+  "runtime": "onnxruntime",
+  "files": [
+    {
+      "path": "models/onnx/vocal-instrumental-example-v1.onnx",
+      "sha256": "REPLACE_WITH_REAL_SHA256_64_HEX_CHARS________________________________",
+      "sizeBytes": 0
+    }
+  ],
+  "input": {
+    "sampleRate": 44100,
+    "channels": 2,
+    "format": "float32"
+  },
+  "output": {
+    "stems": ["vocals", "instrumental"]
+  },
+  "license": {
+    "name": "TBD - verify before distribution",
+    "url": "https://example.invalid/model-license",
+    "attribution": "TBD",
+    "redistributable": false
+  },
+  "notes": "Example only. Replace file path, checksum, size, license, and model details before use."
+}

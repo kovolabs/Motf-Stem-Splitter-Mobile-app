@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["MotfEngineModule"]
+  },
+  "android": {
+    "modules": ["com.motf.engine.MotfEngineModule"]
+  }
+}

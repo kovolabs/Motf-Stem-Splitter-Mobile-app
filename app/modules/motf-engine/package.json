@@ -1,0 +1,17 @@
+{
+  "name": "motf-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Expo Modules scaffold for the MOTF on-device separation engine (native bridge).",
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "expo-modules-core": "*"
+  }
+}

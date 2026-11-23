@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+dist/
+build/
+# Ignore Expo-generated root projects only; keep local native module sources.
+/ios/
+/android/
+*.log
+.DS_Store
+.env
+.env.*

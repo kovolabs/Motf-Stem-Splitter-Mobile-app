@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+tmp/
+.env
+.env.*
+
+# Never commit model weights by default.
+*.onnx
+*.pth
+*.ckpt
+*.mlpackage
+*.tflite
+*.pte

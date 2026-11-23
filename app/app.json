@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "MOTF",
+    "slug": "motf-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.motf.mobile"
+    },
+    "android": {
+      "package": "com.motf.mobile"
+    }
+  }
+}
