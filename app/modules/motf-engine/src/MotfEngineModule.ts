@@ -1,4 +1,4 @@
-import { EventEmitter, requireNativeModule, type Subscription } from 'expo-modules-core';
+import { EventEmitter, requireNativeModule } from 'expo-modules-core';
 
 import type {
   CancelResult,
@@ -38,9 +38,11 @@ export function getNativeMotfEngine(): MotfEngineNativeModule {
   return requireNativeModule<MotfEngineNativeModule>('MotfEngine');
 }
 
-let _emitter: EventEmitter | null = null;
+type EventSubscription = { remove(): void };
 
-function getEmitter(): EventEmitter {
+let _emitter: InstanceType<typeof EventEmitter> | null = null;
+
+function getEmitter(): InstanceType<typeof EventEmitter> {
   if (!_emitter) {
     _emitter = new EventEmitter(getNativeMotfEngine() as any);
   }
@@ -54,7 +56,7 @@ function getEmitter(): EventEmitter {
  * filters by job.id to satisfy the SeparationEngine.subscribe contract.
  */
 export function subscribeToJob(jobId: string, onEvent: (event: JobEvent) => void): () => void {
-  const subscription: Subscription = getEmitter().addListener(MOTF_JOB_EVENT, (event: JobEvent) => {
+  const subscription: EventSubscription = getEmitter().addListener(MOTF_JOB_EVENT, (event: JobEvent) => {
     if (event?.job?.id === jobId) onEvent(event);
   });
   return () => subscription.remove();
