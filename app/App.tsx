@@ -180,7 +180,7 @@ export default function App() {
         ) : null}
       </View>
 
-      <Pressable style={styles.footer} onPress={() => Linking.openURL('https://cuesessions.com/')}>
+      <Pressable style={styles.footer} onPress={() => Linking.openURL('https://cuesessions.com/?ref=motf')}>
         <Text style={styles.footerText}>
           Powered by <Text style={styles.footerBrand}>Cue</Text> · cuesessions.com
         </Text>
@@ -190,18 +190,18 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#080810' },
+  container: { flex: 1, backgroundColor: '#000000' },
   header: { paddingHorizontal: 16, paddingTop: 16, paddingBottom: 8, gap: 4 },
-  kicker: { color: '#a78bfa', fontSize: 12, fontWeight: '700', letterSpacing: 1.2 },
+  kicker: { color: '#C8FF00', fontSize: 12, fontWeight: '700', letterSpacing: 1.2 },
   title: { color: '#ffffff', fontSize: 28, fontWeight: '800' },
   subtitle: { color: '#9ca3af', fontSize: 13, lineHeight: 18 },
   tabs: { flexDirection: 'row', gap: 8, paddingHorizontal: 16, paddingVertical: 12 },
-  tab: { flex: 1, paddingVertical: 10, borderRadius: 10, backgroundColor: '#141426', borderWidth: 1, borderColor: '#2b2b45', alignItems: 'center' },
-  tabActive: { backgroundColor: '#2d2457', borderColor: '#7c3aed' },
+  tab: { flex: 1, paddingVertical: 10, borderRadius: 10, backgroundColor: '#0A0A0A', borderWidth: 1, borderColor: '#222222', alignItems: 'center' },
+  tabActive: { backgroundColor: '#1A1A1A', borderColor: '#C8FF00' },
   tabText: { color: '#9ca3af', fontSize: 12, fontWeight: '700' },
   tabTextActive: { color: '#ffffff' },
   body: { flex: 1 },
-  footer: { paddingHorizontal: 16, paddingVertical: 12, alignItems: 'center', borderTopWidth: 1, borderTopColor: '#2b2b45' },
+  footer: { paddingHorizontal: 16, paddingVertical: 12, alignItems: 'center', borderTopWidth: 1, borderTopColor: '#222222' },
   footerText: { color: '#6b7280', fontSize: 11 },
-  footerBrand: { color: '#a78bfa', fontWeight: '700' },
+  footerBrand: { color: '#C266FE', fontWeight: '800' },
 });
